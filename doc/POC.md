@@ -75,6 +75,9 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 - Username: `admin`
 - Password: (результат з попередньої команди)
 
+## Демо запис
+![Image](../.data/argocdinstall.gif)
+
 ---
 
 ## Крок 4: (Опційно) Встановлення CLI ArgoCD
