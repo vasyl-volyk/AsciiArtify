@@ -2,7 +2,8 @@
 
 ## Мета
 Налаштувати Kubernetes кластер за допомогою k3s, встановити ArgoCD та забезпечити доступ до його графічного інтерфейсу для команди.
-[Документація –](https://argo-cd.readthedocs.io/en/stable/) 
+
+Документація - [https://argo-cd.readthedocs.io/en/stable/](https://argo-cd.readthedocs.io/en/stable/) 
 
 ---
 
