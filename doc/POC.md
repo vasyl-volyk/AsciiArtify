@@ -62,6 +62,8 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 https://localhost:8080
 ```
 
+![Демо](../.data/ArgoScreenShot.png)
+
 ### Отримання пароля адміністратора:
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d && echo
