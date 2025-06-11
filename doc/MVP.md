@@ -113,6 +113,8 @@ spec:
 kubectl apply -f go-demo-app.yaml
 ```
 
+![Image](../.data/ArgoCDdash.png)
+
 ---
 
 ## Крок 5: Перевірка синхронізації
