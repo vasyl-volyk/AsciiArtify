@@ -126,7 +126,7 @@ kubectl apply -f go-demo-app.yaml
 
 ---
 
-## Крок 6: Lемонстрація як працює application
+## Крок 6: Демонстрація як працює application
 
 1. Змінити `image` в `k8s/deployment.yaml`:
 Налаштування доступу до додатку який працює в кластері
@@ -145,6 +145,7 @@ wget -F https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_log
 mv 250px-Kubernetes_logo_without_workmark.svg.png logo.png
 curl -F 'image=@./logo.png' localhost:8088/img/
 ```
+
 
 ## Результат
 
