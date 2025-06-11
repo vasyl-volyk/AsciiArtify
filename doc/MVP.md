@@ -152,6 +152,36 @@ curl -F 'image=@./logo.png' localhost:8088/img/
 
 Демо результату:
 
+![Image](../.data/asciilogo.png)
+
+TXT version
+
+```text
+                     .,:ii:,.
+                 .,;ittfffftti;,.
+             .:;1tfffttttttttffft1;:.
+         .:i1tffttttttttGGttttttttfft1i:.
+     .:i1tfftttttttttttt@@ttttttttttttfft1i:.
+    .1fttttttttttttttttf88fttttttttttt1ttttf1.
+    :fttttfCftttttLG08@@@@@@80GLtttttLCfttttf:
+    1tttttL0@0LfG8@@8GCG@@GCG8@@8GfL0@0fttttt1
+   :fttttttttG@@@@Ct1t1C@@C1t1tC@@@@Gttttttttf:
+   1tttttttttG@@8@8GLf1G@@G1fLG8@8@@Gttttttttt1
+  ,fttttttttG@@LtC8@@80@@@@08@@8CtL@@Gttttttttf,
+  1ttttttttf@@01t11f8@@8GG8@@8f11t10@@ftttttttt1
+,fttttttt1f@@GfCG00@@@C11C@@@00GCfG@@f1tttttttt,
+itttttfLCC0@@@@@@@80@@@88@@808@@@@@@@0CCLfttttti
+,ftttttG80GCG@@Gttttt8@@88@@0tttttG@@GCG08Gtttttf,
+.1fttttttttttG@@GtttG@@0tt0@@GtttG@@Gttttttttttf1.
+  ;tftttttttttL8@@GG@@C1tt1C@@GG@@8Ltttttttttft;
+   .ifttttttttttL0@@@@GGCCGG@@@@0Cttttttttttfi.
+     :tftttttttt1t88G088@@880G88t1ttttttttft:
+      .;ttttttttf8@f1tttttttt1f@8ftttttttt;.
+        ,1ftttttLGLttttttttttttLGLtttttf1,
+          :tfttttttttttttttttttt1ttttft:
+           .itffffffffffffffffffffffti.
+             ,;;iiiiiiiiiiiiiiii;;;;,
+```
 
 ## Результат
 
