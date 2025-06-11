@@ -146,6 +146,12 @@ mv 250px-Kubernetes_logo_without_workmark.svg.png logo.png
 curl -F 'image=@./logo.png' localhost:8088/img/
 ```
 
+Демо кроків:
+
+![Image](../.data/argocdimagedemo.gif)
+
+Демо результату:
+
 
 ## Результат
 
