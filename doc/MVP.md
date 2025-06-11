@@ -64,7 +64,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ## Крок 3: Підготовка Git репозиторію
 
-У репозиторії [`go-demo-app`](https://github.com/den-vasyliev/go-demo-app) вже є Kubernetes YAML-файли у директорії `k8s/`.
+Впевнитися що у репозиторії [`go-demo-app`](https://github.com/den-vasyliev/go-demo-app) вже є Kubernetes YAML-файли у директорії `helm/`.
 
 ---
 
