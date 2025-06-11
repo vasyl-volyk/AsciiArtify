@@ -183,12 +183,12 @@ itttttfLCC0@@@@@@@80@@@88@@808@@@@@@@0CCLfttttti
              ,;;iiiiiiiiiiiiiiii;;;;,
 ```
 
+asciinema [link](https://asciinema.org/a/iVylkkSKq2J32mLfzHsAot3co)
+
 ## Результат
 
 - ArgoCD відслідковує зміни у Git
 - Автоматично оновлює Kubernetes кластер
 - Забезпечує повноцінний CI/CD для MVP
 
----
 
-> **P.S.** Можна додатково інтегрувати GitHub Actions для CI, якщо потрібно.
