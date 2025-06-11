@@ -126,21 +126,25 @@ kubectl apply -f go-demo-app.yaml
 
 ---
 
-## Крок 6: Повний цикл демонстрації
+## Крок 6: Lемонстрація як працює application
 
 1. Змінити `image` в `k8s/deployment.yaml`:
-
-```yaml
-image: denvasyliev/go-demo-app:latest
+Налаштування доступу до додатку який працює в кластері
+```bash
+kubectl port-forward -n demo svc/ambassador 8088:80
+kubectl port-forward svc/ambassador 8088:80
 ```
 
-2. Закомітити й запушити в Git.
-3. ArgoCD автоматично:
-   - Визначить зміни
-   - Проведе синхронізацію
-   - Оновить кластер
-
----
+2. Перевірити доступ
+```bash
+curl localhost:8088
+```
+3. Завантажити будь який графічний файл и передати в додаток щоб отримати ascii версію:
+```bash
+wget -F https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/250px-Kubernetes_logo_without_workmark.svg.png
+mv 250px-Kubernetes_logo_without_workmark.svg.png logo.png
+curl -F 'image=@./logo.png' localhost:8088/img/
+```
 
 ## Результат
 
