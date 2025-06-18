@@ -1,17 +1,47 @@
 #!/bin/bash
 
-# Define command-line arguments
+# kubectl-res-stats.sh — виводить статистику CPU та пам'яті за даними kubectl top
+# Використання: ./kubectl-res-stats.sh <namespace> <resource_type>
+# Приклад:      ./kubectl-res-stats.sh kube-system top pods
 
-RESOURCE_TYPE=$0
+# Функція довідки
+show_help() {
+  echo "Використання: $0 <namespace> <resource_type>"
+  echo ""
+  echo "Аргументи:"
+  echo "  <namespace>      Kubernetes namespace (наприклад: default, kube-system)"
+  echo "  <resource_type>  Тип ресурсу (наприклад: pods, nodes)"
+  echo ""
+  echo "Приклад:"
+  echo "  $0 default pods"
+  echo ""
+  echo "Вивід: Resource, Namespace, Name, CPU, Memory"
+}
 
-# Retrieve resource usage statistics from Kubernetes
-kubectl $2 $RESOURCE_TYPE -n $1 | tail -n +2 | while read line
-do
-  # Extract CPU and memory usage from the output
-  NAME=$(echo $line | awk '{print $1}')
-  CPU=$(echo $line | awk '{print $2}')
-  MEMORY=$(echo $line | awk '{print $3}')
+# Обробка ключа допомоги
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  show_help
+  exit 0
+fi
 
-  # Output the statistics to the console
-  # "Resource, Namespace, Name, CPU, Memory"
+# Перевірка кількості аргументів
+if [[ $# -ne 2 ]]; then
+  echo "❌ Некоректні аргументи"
+  show_help
+  exit 1
+fi
+
+NAMESPACE=$1
+COMMAND='top'
+RESOURCE_TYPE=$2
+
+# Заголовок таблиці
+echo "Resource, Namespace, Name, CPU, Memory"
+
+# Отримання та обробка виводу kubectl
+kubectl "$COMMAND" "$RESOURCE_TYPE" -n "$NAMESPACE" | tail -n +2 | while read -r line; do
+  NAME=$(echo "$line" | awk '{print $1}')
+  CPU=$(echo "$line" | awk '{print $2}')
+  MEMORY=$(echo "$line" | awk '{print $3}')
+  echo "$RESOURCE_TYPE, $NAMESPACE, $NAME, $CPU, $MEMORY"
 done
